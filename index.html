@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Phone Shop</title>
+  </head>
+  <body>
+    <main class="px-6 lg:px-20 text-center space-y-6 my-10">
+      <h1 class="text-3xl text-sky-400 bold font-serif">Hunting Phone</h1>
+      <div class="join block">
+        <input
+          id="input"
+          type="text"
+          placeholder="Search Your Ideal Phone"
+          class="input join-item input-bordered input-accent w-full max-w-xs"
+        />
+        <button
+          class="btn join-item btn-outline btn-success"
+          onclick="displayDataBtn()"
+        >
+          Search
+        </button>
+      </div>
+
+      <span
+        id="loading"
+        class="loading loading-spinner loading-lg text-success mx-auto pt-60 hidden"
+      ></span>
+      <div
+        id="phone-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+      ></div>
+      <button class="btn btn-outline btn-info hidden" id="showAllBtn">
+        Load All
+      </button>
+    </main>
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+      <form method="dialog" class="modal-box card card-compact w-96 " id="modal-data">
+        
+    </form> 
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
